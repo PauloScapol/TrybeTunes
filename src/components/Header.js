@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
 import Loading from './Loading';
 import User from './User';
@@ -32,18 +32,17 @@ class Header extends React.Component {
           loading
             ? <Loading /> : <User name={ userName } />
         }
-
-        {/* <Link to='/search' data-testid="link-to-search">
-          Search
-        </Link>
-
-        <Link to='/favorites' data-testid="link-to-favorites">
-          Favorites
-        </Link>
-
-        <Link to='/profile' data-testid="link-to-profile">
-          Profile
-        </Link> */}
+        <ul>
+          <li>
+            <Link to="/search" data-testid="link-to-search">Search</Link>
+          </li>
+          <li>
+            <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
+          </li>
+          <li>
+            <Link to="/profile" data-testid="link-to-profile">Profile</Link>
+          </li>
+        </ul>
       </header>
     );
   }
