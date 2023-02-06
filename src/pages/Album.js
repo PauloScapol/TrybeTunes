@@ -35,8 +35,8 @@ class Album extends Component {
         <Header />
 
         <section>
-          <div data-testid="artist-name">{artistName}</div>
-          <div data-testid="album-name">{albumName}</div>
+          <h2 data-testid="album-name">{albumName}</h2>
+          <h3 data-testid="artist-name">{artistName}</h3>
         </section>
 
         <section>
