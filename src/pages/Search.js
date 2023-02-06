@@ -1,31 +1,55 @@
 import React from 'react';
+import AlbumDisplay from '../components/AlbumDisplay';
 import Header from '../components/Header';
+import Loading from '../components/Loading';
+import searcAlbumsAPI from '../services/searchAlbumsAPI';
 
 class Search extends React.Component {
   state = {
     artist: '',
-    searchBtn: true,
+    albums: [],
+    loading: false,
+    artistSearch: '',
   };
 
   onInputChange = ({ target }) => {
-    const { value } = target;
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  buttonClicked = async () => {
     const { artist } = this.state;
 
     this.setState({
-      artist: value,
-      searchBtn: (artist.length < 1),
+      loading: true,
+      artistSearch: artist,
+    }, async () => {
+      const artistId = await searcAlbumsAPI(artist);
+
+      this.setState({
+        albums: artistId,
+        loading: false,
+        artist: '',
+      });
     });
   };
 
   render() {
-    const { artist, searchBtn } = this.state;
+    const { artist, albums, loading, artistSearch } = this.state;
+    const minArtistLength = 2;
+
+    if (loading) return <Loading />;
 
     return (
       <div data-testid="page-search">
         Search
         <Header />
         <form>
-          <label htmlFor="search-artist">
+          <label htmlFor="artist">
             <input
               type="text"
               placeholder="Nome do Artista"
@@ -38,11 +62,35 @@ class Search extends React.Component {
 
           <button
             data-testid="search-artist-button"
-            disabled={ searchBtn }
+            disabled={ artist.length < minArtistLength }
+            onClick={ this.buttonClicked }
           >
             Pesquisar
           </button>
         </form>
+
+        {
+          (albums.length) !== 0
+            ? (
+              <div>
+                <span>
+                  {' '}
+                  { `Resultado de álbuns de: ${artistSearch}` }
+                </span>
+
+                { albums.map((album) => (
+                  <AlbumDisplay
+                    key={ album.collectionId }
+                    albumImg={ album.artworkUrl100 }
+                    // artistId={ album.artistId }
+                    artistSearch={ album.collectionName }
+                    artistName={ album.artistName }
+                    collectionId={ album.collectionId }
+                  />
+                ))}
+              </div>)
+            : <h2>Nenhum álbum foi encontrado</h2>
+        }
       </div>
     );
   }

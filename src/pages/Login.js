@@ -43,6 +43,8 @@ class Login extends React.Component {
         <form>
           <label htmlFor="login-name">
             <input
+              type="text"
+              placeholder="Nome"
               name="name"
               value={ name }
               data-testid="login-name-input"
