@@ -11,8 +11,8 @@ class Album extends Component {
     artistName: '',
     albumName: '',
     albumList: [],
-    loading: false,
     favoriteSongs: [],
+    loading: false,
   };
 
   async componentDidMount() {
