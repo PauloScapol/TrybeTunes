@@ -1,0 +1,199 @@
+body {
+  background-image: url('./components/background.jpeg');
+}
+
+/* LOADING */
+.loading {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ff944d;
+  font-size: 100px;
+  margin-top: 30vh;
+  text-align: center;
+}
+
+/* LOGIN */
+.loginPage {
+  align-items: center;
+  background-color: rgba(31, 30, 30, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 250px auto;
+  max-width: 31rem;
+  padding: 40px;
+}
+
+.loginPage input {
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-shadow: none;
+  color: white;
+  font-size: 30px;
+  margin: 20px;
+}
+
+.loginPage button {
+  background-color: #ff944d;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 15px;
+}
+
+.loginPage button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.loginPage button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* HEADER */
+.headerTop {
+  align-items: center;
+  background-color: #23252b;
+  color: #f47521;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  width: 60%;
+}
+
+.link:link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:visited {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* SEARCH */
+.searchPage {
+  background-color: rgba(31, 30, 30, 0.5);
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.searchPage input {
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-shadow: none;
+  color: white;
+  font-size: 30px;
+  margin: 20px;
+}
+
+.searchPage .button {
+  background-color: #ff944d;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 30px;
+  padding: 5px 15px;
+}
+
+.albumsSearchContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.albumsSearchContainer span {
+  align-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.925);
+  color: white;
+  display: flex;
+  font-size: x-large;
+  margin: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 200px;
+}
+
+/* ALBUM DISPLAY */
+.albumDisplay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.925);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.albumDisplay img {
+  width: 150px;
+}
+
+/* MUSIC CARD */
+.albumArtist {
+  align-content: space-between;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f47521;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.albumArtist h2 {
+  font-size: 50px;
+}
+
+.albumArtist h3 {
+  font-size: 30px;
+}
+
+.albumList {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.songName {
+  color: white;
+}
+
+.song {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-weight: 600;
+  padding: 50px;
+  text-align: center;
+}
+
+.song input {
+  margin-left: 20px;
+  margin-top: 20px;
+}

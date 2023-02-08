@@ -6,7 +6,7 @@ class User extends React.Component {
     const { name } = this.props;
 
     return (
-      <span data-testid="header-user-name">{ name }</span>
+      <h3 data-testid="header-user-name">{ name }</h3>
     );
   }
 }

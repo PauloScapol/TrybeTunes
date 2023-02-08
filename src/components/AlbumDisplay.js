@@ -7,7 +7,7 @@ class AlbumDisplay extends React.Component {
     const { albumImg, artistName, artistSearch, collectionId } = this.props;
 
     return (
-      <div>
+      <div className="albumDisplay">
         <img src={ albumImg } alt={ artistSearch } />
         <h3>{ artistSearch }</h3>
         <h4>{ artistName }</h4>
@@ -16,7 +16,7 @@ class AlbumDisplay extends React.Component {
           data-testid={ `link-to-album-${collectionId}` }
           to={ `/album/${collectionId}` }
         >
-          + Info
+          Ver músicas
         </Link>
       </div>
     );

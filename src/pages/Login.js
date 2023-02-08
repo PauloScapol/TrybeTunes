@@ -40,7 +40,7 @@ class Login extends React.Component {
 
     return (
       <div data-testid="page-login">
-        <form>
+        <form className="loginPage">
           <label htmlFor="login-name">
             <input
               type="text"

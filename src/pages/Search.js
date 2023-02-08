@@ -48,7 +48,7 @@ class Search extends React.Component {
       <div data-testid="page-search">
         Search
         <Header />
-        <form>
+        <form className="searchPage">
           <label htmlFor="artist">
             <input
               type="text"
@@ -61,6 +61,7 @@ class Search extends React.Component {
           </label>
 
           <button
+            className="button"
             data-testid="search-artist-button"
             disabled={ artist.length < minArtistLength }
             onClick={ this.buttonClicked }
@@ -72,7 +73,7 @@ class Search extends React.Component {
         {
           (albums.length) !== 0
             ? (
-              <div>
+              <div className="albumsSearchContainer">
                 <span>
                   {' '}
                   { `Resultado de álbuns de: ${artistSearch}` }
@@ -82,7 +83,6 @@ class Search extends React.Component {
                   <AlbumDisplay
                     key={ album.collectionId }
                     albumImg={ album.artworkUrl100 }
-                    // artistId={ album.artistId }
                     artistSearch={ album.collectionName }
                     artistName={ album.artistName }
                     collectionId={ album.collectionId }

@@ -63,15 +63,15 @@ class Album extends Component {
         {
           loading ? <Loading /> : (
             <>
-              <section>
+              <section className="albumArtist">
                 <h2 data-testid="album-name">{albumName}</h2>
                 <h3 data-testid="artist-name">{artistName}</h3>
               </section>
 
-              <section>
+              <section className="albumList">
                 {
                   albumList.map((song, index) => (
-                    <div key={ index }>
+                    <div className="song" key={ index }>
                       <MusicCard
                         trackId={ song.trackId }
                         trackName={ song.trackName }
