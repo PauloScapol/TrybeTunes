@@ -1,0 +1,20 @@
+.albumList {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.song {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-weight: 600;
+  padding: 50px;
+  text-align: center;
+}
+
+.song input {
+  margin-left: 20px;
+  margin-top: 20px;
+}

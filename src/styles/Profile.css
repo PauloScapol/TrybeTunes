@@ -1,0 +1,38 @@
+.profile {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+img {
+  border-radius: 50%;
+  height: 200px;
+  margin-bottom: 16px;
+  object-fit: cover;
+  width: 200px;
+}
+
+.editar-perfil {
+  background-color: #007f;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.editar-perfil:hover {
+  background-color: #0058c2;
+}

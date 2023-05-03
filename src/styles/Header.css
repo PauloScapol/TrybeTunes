@@ -1,0 +1,33 @@
+.headerTop {
+  align-items: center;
+  background-color: #23252b;
+  color: #f47521;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.headerNav {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  width: 60%;
+}
+
+.link:link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:visited {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}

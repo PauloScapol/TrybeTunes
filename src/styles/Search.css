@@ -1,0 +1,48 @@
+/* SEARCH */
+.searchPage {
+  background-color: rgba(31, 30, 30, 0.5);
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.searchPage input {
+  background-color: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-shadow: none;
+  color: white;
+  font-size: 30px;
+  margin: 20px;
+}
+
+.searchPage .button {
+  background-color: #ff944d;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 30px;
+  padding: 5px 15px;
+}
+
+.albumsSearchContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.albumsSearchContainer span {
+  align-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.925);
+  color: white;
+  display: flex;
+  font-size: x-large;
+  margin: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 200px;
+}

@@ -1,0 +1,15 @@
+.albumDisplay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.925);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.albumDisplay img {
+  width: 150px;
+}

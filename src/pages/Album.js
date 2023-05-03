@@ -5,6 +5,7 @@ import getMusics from '../services/musicsAPI';
 import MusicCard from '../components/MusicCard';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
 import Loading from '../components/Loading';
+import '../styles/Album.css';
 
 class Album extends Component {
   state = {
@@ -57,8 +58,8 @@ class Album extends Component {
 
     return (
       <div data-testid="page-album">
-        Album
         <Header />
+        Album
 
         {
           loading ? <Loading /> : (

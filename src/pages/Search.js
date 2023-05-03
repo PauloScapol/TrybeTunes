@@ -3,6 +3,7 @@ import AlbumDisplay from '../components/AlbumDisplay';
 import Header from '../components/Header';
 import Loading from '../components/Loading';
 import searcAlbumsAPI from '../services/searchAlbumsAPI';
+import '../styles/Search.css';
 
 class Search extends React.Component {
   state = {
@@ -46,8 +47,8 @@ class Search extends React.Component {
 
     return (
       <div data-testid="page-search">
-        Search
         <Header />
+        Search
         <form className="searchPage">
           <label htmlFor="artist">
             <input
