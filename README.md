@@ -54,7 +54,7 @@ Foi implementado uma aplicação capaz de reproduzir músicas das mais variadas 
 
 ## Demonstração da aplicação
 
-:construction: EM CONSTRUÇÃO :construction:
+![caption](https://github.com/PauloScapol/GIFS/blob/main/TrybeTunes%20(2).gif)
 
 ---
 
